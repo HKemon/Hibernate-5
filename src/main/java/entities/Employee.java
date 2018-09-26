@@ -7,12 +7,13 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="employee_table")
+@Table(name = "employee_table")
 @DynamicInsert
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employee_id")
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "empId_generator")
+    @SequenceGenerator(name = "empId_generator", initialValue = 1, allocationSize = 1, sequenceName = "empId_seq")
     private Integer employeeId;
 
     @Column(name = "employee_name")
