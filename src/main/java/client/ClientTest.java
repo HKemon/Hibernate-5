@@ -13,6 +13,13 @@ public class ClientTest {
             session.beginTransaction();
             session.save(employee);
             session.getTransaction().commit();
+//            Employee employee = session.get(Employee.class, 1);
+//            if (employee != null){
+//                session.beginTransaction();
+//                employee.setSalary(200.0);
+//                session.update(employee);
+//                session.getTransaction().commit();
+//            }else System.out.println("Nothing is there");
         } catch (Exception e) {
             e.printStackTrace();
         }

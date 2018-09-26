@@ -1,10 +1,14 @@
 package entities;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name="employee_table")
+@DynamicInsert
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
