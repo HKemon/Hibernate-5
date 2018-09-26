@@ -1,18 +1,18 @@
-<!--<?xml version="1.0" encoding="UTF-8"?>-->
-<!--<!DOCTYPE hibernate-configuration PUBLIC-->
-        <!--"-//Hibernate/Hibernate Configuration DTD 3.0//EN"-->
-        <!--"http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">-->
-<!--<hibernate-configuration>-->
-    <!--<session-factory>-->
-        <!--<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>-->
-        <!--<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>-->
-        <!--<property name="hibernate.connection.username">root</property>-->
-        <!--<property name="hibernate.connection.password">root</property>-->
-        <!--&lt;!&ndash;<property name="hibernate.connection.pool_size">1</property>&ndash;&gt;-->
-        <!--&lt;!&ndash;<property name="hibernate.current_session_context_class">thread</property>&ndash;&gt;-->
-        <!--&lt;!&ndash;<property name="hibernate.show_sql">true</property>&ndash;&gt;-->
-        <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
-        <!--&lt;!&ndash;<mapping resource="book.hbm.xml" />&ndash;&gt;-->
-    <!--</session-factory>-->
-<!--</hibernate-configuration>-->
+        <mapping class="entities.Employee"/>
+    </session-factory>
+</hibernate-configuration>
