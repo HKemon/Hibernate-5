@@ -5,10 +5,6 @@ import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Environment;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class HibernateUtil {
     private static StandardServiceRegistry standardServiceRegistry;
@@ -30,6 +26,16 @@ public class HibernateUtil {
         }
     }
 
+    public static SessionFactory getSessionFactory(){
+        return sessionFactory;
+    }
+}
+
+//import org.hibernate.cfg.Environment;
+//
+//        import java.util.HashMap;
+//        import java.util.Map;
+
 //    static {
 //        // Create StandardServiceRegistryBuilder
 //        StandardServiceRegistryBuilder registryBuilder = new StandardServiceRegistryBuilder();
@@ -47,8 +53,3 @@ public class HibernateUtil {
 //        Metadata metadata = metadataSources.getMetadataBuilder().build();
 //        sessionFactory = metadata.getSessionFactoryBuilder().build();
 //    }
-
-    public static SessionFactory getSessionFactory(){
-        return sessionFactory;
-    }
-}
