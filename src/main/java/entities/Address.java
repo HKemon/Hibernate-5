@@ -1,11 +1,10 @@
 //package entities;
 //
 //import javax.persistence.*;
-//import java.io.Serializable;
 //
 //@Entity
 //@Table(name = "address_table")
-//public class Address implements Serializable {
+//public class Address{
 //
 //    @Id
 //    @Column(name = "address_id")
@@ -16,11 +15,27 @@
 //    @Column(name = "street_name")
 //    private String street;
 //
+//    public Integer getAddressId() {
+//        return addressId;
+//    }
+//
+//    public void setAddressId(Integer addressId) {
+//        this.addressId = addressId;
+//    }
+//
 //    public String getStreet() {
 //        return street;
 //    }
 //
 //    public void setStreet(String street) {
 //        this.street = street;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Address{" +
+//                "addressId=" + addressId +
+//                ", street='" + street + '\'' +
+//                '}';
 //    }
 //}
